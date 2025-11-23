@@ -1,1 +1,1 @@
-https://wakanda1519.github.io/portfolio
+https://wakanda1519.github.io
