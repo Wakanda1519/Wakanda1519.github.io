@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bio ● Portfolio ● wakanda</title>
+
+  <meta name="description" content="Эта информация поможет вам узнать, стоит ли вам со мной работать.">
+  <meta name="keywords" content="веб разработка, frontend, backend, JavaScript, PHP, SQL, портфолио, wakanda, Wakanda1519, веб-сайт, разработка сайтов, GameStores, Rust, стили">
+  <meta name="author" content="https://t.me/wakanda1519">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="My Bio ● Portfolio ● wakanda">
+  <meta property="og:description" content="Эта информация поможет вам узнать, стоит ли вам со мной работать.">
+  <meta property="og:image" content="assets/site.png">
+  <meta property="og:url" content="https://wakanda1519.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Bio ● Portfolio ● wakanda">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+
+<div class="bg-scene" id="bg-scene" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div id="particles"></div>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#hero"><b>&lt;/&gt;</b> wakanda</a>
+  <nav class="nav-links" id="nav-links">
+    <a href="#about">Кто я</a>
+    <a href="#stack">Стек</a>
+    <a href="#skills">Умения</a>
+    <a href="#rust">Rust</a>
+    <a href="#project">Проект</a>
+    <a href="#works">Работы</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+  <button id="nav-burger" aria-label="Открыть меню"><i data-lucide="menu"></i></button>
+</header>
+<div class="nav-mobile glass" id="nav-mobile">
+  <a href="#about">Кто я</a>
+  <a href="#stack">Стек</a>
+  <a href="#skills">Умения</a>
+  <a href="#rust">Rust</a>
+  <a href="#project">Проект</a>
+  <a href="#works">Работы</a>
+  <a href="#contact">Контакты</a>
+</div>
+
+<main>
+
+<section class="hero" id="hero">
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div id="bg3d" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-left reveal">
+      <div class="code-widget glass" id="code-widget">
+        <div class="code-top">
+          <span class="dot dot-r"></span>
+          <span class="dot dot-y"></span>
+          <span class="dot dot-g"></span>
+          <span class="code-title">wakanda.js — ~/portfolio</span>
+        </div>
+        <div class="code-body" id="code-body"></div>
+        <div class="code-statusbar">
+          <span class="status-live"><i></i>Ready to code</span>
+          <span>JavaScript</span>
+          <span>UTF-8</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right reveal" data-delay="120">
+      <div class="exp-badge glass">
+        <i data-lucide="check"></i>
+        Опыт 3+ года
+      </div>
+      <p class="hero-eyebrow">~/привет, меня зовут</p>
+      <h1>Михаил <em>wakanda</em></h1>
+      <p class="type-line"><span class="prompt-sym">&gt;</span><span id="typewriter"></span><span class="type-caret"></span></p>
+      <p class="hero-desc">
+        Full-stack разработчик с большим опытом в разных сферах.
+        Стек: HTML, CSS, JS, PHP, SQL. Сайт создан для знакомства
+        с моим трудом, и позволяет понять, стоит ли со мной работать.
+      </p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="#works"><i data-lucide="layers"></i>Смотреть работы</a>
+        <a class="btn btn-ghost" href="#contact"><i data-lucide="send"></i>Контакты</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><i data-lucide="chevron-down"></i></div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-index">// 02</span>
+      <h2>Кто я</h2>
+      <span class="sec-line"></span>
+    </div>
+    <div class="about-grid">
+      <div class="about-avatar reveal" id="avatar3d">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Аватар wakanda">
+          <defs>
+            <radialGradient id="av-g" cx="35%" cy="28%" r="85%">
+              <stop offset="0%" stop-color="#2b2244"/>
+              <stop offset="55%" stop-color="#181d2a"/>
+              <stop offset="100%" stop-color="#11151d"/>
+            </radialGradient>
+          </defs>
+          <circle cx="100" cy="100" r="97" fill="url(#av-g)"/>
+          <circle cx="100" cy="100" r="97" fill="none" stroke="rgba(255,255,255,.14)"/>
+          <text x="100" y="126" text-anchor="middle" font-family="'JetBrains Mono',monospace"
+                font-size="56" fill="#c9d1d9">BIO</text>
+        </svg>
+      </div>
+      <div class="about-text reveal" data-delay="140">
+        <p>
+          Я — full-stack разработчик. Пишу и фронтенд, и бэкенд: от вёрстки и прототипа в Figma
+          до баз данных и API. Основной стек — <b>HTML, CSS, JS, PHP и SQL</b>.
+        </p>
+        <p>
+          Когда я <b>просто хотел сделать сайт</b> для своего проекта по игре Rust, по итогу я сделал
+          для него <b>полную экосистему</b> с сайтом, дашбордом для персонала, стилем для донат магазина
+          и базы данных. <b>Автоматизировал и оптимизировал</b> почти все процессы, сведя обслуживание
+          проекта к 30 минутам в неделю.
+        </p>
+        <p>
+          Могу модернизировать текущие процессы, автоматизировать рутину и улучшить продукт — так же, 
+          как сделал это в <b>своём проекте</b>. Если вам нужен разработчик, который думает о <b>пользе для бизнеса</b>, 
+          а не просто пишет код — жду вас в <b>личных сообщениях Telegram</b>, контакты в конце сайта!
+        </p>
+        <div class="quote-plate glass">
+          <span><span class="cm">//</span> Я всегда выберу ленивого человека для выполнения сложной работы, 
+          <br><span class="cm">//</span> потому что он найдет легкий путь ее выполнения.
+          <br><span class="cm">//</span> - Билл Гейтс</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-index">// 03</span>
+      <h2>Стек технологий</h2>
+      <span class="sec-line"></span>
+    </div>
+    <div class="stack-grid">
+
+      <div class="stack-card glass reveal" data-tone="violet">
+        <h3><span class="tone-dot"></span>Frontend</h3>
+        <div class="tech-list">
+          <div class="tech-item"><i class="devicon-html5-plain" style="color:#d07a4f"></i><span class="ti-name">HTML</span></div>
+          <div class="tech-item"><i class="devicon-css3-plain" style="color:#6aa0d8"></i><span class="ti-name">CSS</span></div>
+          <div class="tech-item"><i class="devicon-javascript-plain" style="color:#d4b95e"></i><span class="ti-name">JavaScript</span></div>
+          <div class="tech-item"><i class="devicon-bootstrap-plain" style="color:#9a7ab8"></i><span class="ti-name">Bootstrap</span></div>
+          <div class="tech-item"><i class="devicon-bulma-plain" style="color:#5fb8ad"></i><span class="ti-name">Bulma</span></div>
+          <div class="tech-item"><i class="devicon-tailwindcss-plain" style="color:#6fc3df"></i><span class="ti-name">Tailwind</span></div>
+        </div>
+      </div>
+
+      <div class="stack-card glass reveal" data-tone="pink" data-delay="120">
+        <h3><span class="tone-dot"></span>Backend</h3>
+        <div class="tech-list">
+          <div class="tech-item"><i class="devicon-php-plain" style="color:#9a9ab8"></i><span class="ti-name">PHP</span></div>
+          <div class="tech-item"><i class="devicon-mysql-plain" style="color:#5d9bb5"></i><span class="ti-name">SQL</span></div>
+          <div class="tech-item"><i class="devicon-nodejs-plain" style="color:#78b583"></i><span class="ti-name">Node.js</span></div>
+          <div class="tech-item"><i class="devicon-go-plain" style="color:#6fc3df"></i><span class="ti-name">Go</span></div>
+        </div>
+      </div>
+
+      <div class="stack-card glass reveal" data-tone="teal" data-delay="240">
+        <h3><span class="tone-dot"></span>Tools</h3>
+        <div class="tech-list">
+          <div class="tech-item"><i class="devicon-vscode-plain" style="color:#6ba0d8"></i><span class="ti-name">VS Code</span></div>
+          <div class="tech-item"><i class="devicon-figma-plain" style="color:#b58fd8"></i><span class="ti-name">Figma</span></div>
+          <div class="tech-item"><i data-lucide="pen-tool" style="color:#d985a8"></i><span class="ti-name">PixSo</span></div>
+          <div class="tech-item"><i data-lucide="bot" style="color:#dca25a"></i><span class="ti-name">AI</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-index">// 04</span>
+      <h2>Что я умею</h2>
+      <span class="sec-line"></span>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-card glass glass-i reveal" style="--tone-c:#a48fe6; --tone-glow:rgba(124,58,237,.4)">
+        <div class="skill-icon"><i data-lucide="code"></i></div>
+        <h4>Веб-разработка</h4>
+        <p>Сайты от лендингов до веб-приложений с личным кабинетом и админкой</p>
+      </div>
+
+      <div class="skill-card glass glass-i reveal" data-delay="80" style="--tone-c:#d985a8; --tone-glow:rgba(219,39,119,.4)">
+        <div class="skill-icon"><i data-lucide="server"></i></div>
+        <h4>Backend API</h4>
+        <p>REST API, интеграции, серверная логика, безопасность.</p>
+      </div>
+
+      <div class="skill-card glass glass-i reveal" data-delay="160" style="--tone-c:#5fb8ad; --tone-glow:rgba(13,148,136,.4)">
+        <div class="skill-icon"><i data-lucide="database"></i></div>
+        <h4>Базы данных</h4>
+        <p>Таблицы, запросы, оптимизация.</p>
+      </div>
+
+      <div class="skill-card glass glass-i reveal" style="--tone-c:#dca25a; --tone-glow:rgba(217,119,6,.4)">
+        <div class="skill-icon"><i data-lucide="rocket"></i></div>
+        <h4>Лаунчеры</h4>
+        <p>Автообновления, настройка загрузки, новости, поддержка.</p>
+      </div>
+
+      <div class="skill-card glass glass-i reveal" data-delay="80" style="--tone-c:#a48fe6; --tone-glow:rgba(124,58,237,.4)">
+        <div class="skill-icon"><i data-lucide="bot"></i></div>
+        <h4>Боты для соц сетей</h4>
+        <p>VK, Telegram и Discord: уведомления, постинг, приём заявок, логи.</p>
+      </div>
+
+      <div class="skill-card glass glass-i reveal" data-delay="160" style="--tone-c:#d985a8; --tone-glow:rgba(219,39,119,.4)">
+        <div class="skill-icon"><i data-lucide="palette"></i></div>
+        <h4>Стили для GameStores</h4>
+        <p>Кастомные стили и темы для магазинов.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="rust">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-index">// 05</span>
+      <h2>Сотрудничество</h2>
+      <span class="sec-line"></span>
+    </div>
+    <p class="hero-desc reveal" style="margin-bottom:28px;">
+      Проекты, с которыми я работал:
+    </p>
+  </div>
+  
+  <div class="marquee reveal">
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+</section>
+
+<section id="project">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-index">// 06</span>
+      <h2>Мой RUST проект</h2>
+      <span class="sec-line"></span>
+    </div>
+    <div class="flagship glass reveal">
+      <div class="flag-head">
+        <img class="flag-avatar" src="assets/ava1.jpg" alt="БАТЯ RUST">
+        <div>
+          <div class="flag-name">Your Rusty Story</div>
+          <div class="flag-sub">Вся разработка вокруг проекта сделанная мной</div>
+        </div>
+        <div class="live-badge"><i class="live-dot"></i>online · работает и развивается с 2021</div>
+      </div>
+      <div class="flag-links" id="flag-links"></div>
+      <div class="flag-stats">
+        <div class="stat stat-amber"><b>2021</b><span>начало работы над проектом</span></div>
+        <div class="stat stat-violet"><b>3</b><span>игровых сервера</span></div>
+        <div class="stat stat-teal"><b>5</b><span>направлений разработки под моим контролем</span></div>
+      </div>
+      <div class="flag-body">
+        <div class="flag-about">
+          <p>
+            Проект <b>работает с 2021 года</b> — до сих пор улучшается
+            и приносит доход. Начинался с одного сервера, а вырос
+            в <b>целую экосистему</b>, которую я разработал и поддерживаю.
+          </p>
+          <p>
+            Серверы работают на двух поколениях игры: <b>1 сервер на 196
+            devblog</b> (версия Rust 2017 года) и <b>2 сервера на 217 devblog</b>
+            (версия Rust 2019 года).
+          </p>
+          <div class="module" data-tone="violet">
+            <div class="mod-icon"><i data-lucide="layout-dashboard"></i></div>
+            <h5>Дашборд для работы персонала</h5>
+            <p>Рабочее место команды для удалённых проверок игроков, получения выплат и выдачи наказаний нарушителям.</p>
+            <div class="dash-feats">
+              <span class="feat"><i data-lucide="wallet"></i>система зарплат</span>
+              <span class="feat feat-amber"><i data-lucide="shield-check"></i>удалённая проверка игроков</span>
+              <span class="feat"><i data-lucide="database"></i>база логов игроков и античита</span>
+            </div>
+          </div>
+        </div>
+        <div class="flag-modules">
+          <div class="module" data-tone="violet">
+            <div class="mod-icon"><i data-lucide="globe"></i></div>
+            <h5>Многостраничный сайт</h5>
+            <p>Полноценный сайт проекта: новости, мониторинг, страницы серверов.</p>
+          </div>
+          <div class="module" data-tone="pink">
+            <div class="mod-icon"><i data-lucide="palette"></i></div>
+            <h5>Стиль донат-магазина</h5>
+            <p>Уникальный стиль магазина на GameStores под проект.</p>
+          </div>
+          <div class="module" data-tone="teal">
+            <div class="mod-icon"><i data-lucide="plug"></i></div>
+            <h5>REST API</h5>
+            <p>API для работы с данными всех сервисов проекта.</p>
+          </div>
+          <div class="module" data-tone="amber">
+            <div class="mod-icon"><i data-lucide="bot"></i></div>
+            <h5>Боты для соц сетей</h5>
+            <p>Показывают онлайн серверов, актуальную карту и график вайпов.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-index">// 07</span>
+      <h2>Публичные работы</h2>
+      <span class="sec-line"></span>
+    </div>
+    <div class="works-filters reveal" id="works-filters"></div>
+    <div class="works-grid" id="works-grid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-index">// 08</span>
+      <h2>Давайте работать вместе</h2>
+      <span class="sec-line"></span>
+    </div>
+    <div class="contact-grid" id="contact-grid"></div>
+    <div class="contact-cta reveal" id="contact-cta"></div>
+  </div>
+</section>
+</main>
+
+<div class="footer-wrap">
+  <div class="container">
+    <div class="copyright glass">
+      <span>© <span id="year">2026</span> wakanda</span>
+      <span class="no-fx">// улыбнись</span>
+    </div>
+  </div>
+</div>
+<div class="modal-overlay" id="konami-modal" role="dialog" aria-modal="true" aria-labelledby="konami-title">
+  <div class="modal-box glass">
+    <div class="modal-badge">achievement unlocked</div>
+    <h3 id="konami-title">Секретный уровень</h3>
+    <pre>git commit -m "Konami Code принят"
+<span class="c-vio">[main a1e5t3]</span> curiosity: <span class="c-acc">+100</span>
+<span class="c-dim">1 file changed, 1 easter egg found</span></pre>
+    <p>↑ ↑ ↓ ↓ ← → ← → B A. Ачивка «любопытный» — твоя.</p>
+    <button class="btn btn-primary" id="konami-close" style="margin:0 auto"><i data-lucide="terminal"></i>Продолжить за код</button>
+  </div>
+</div>
+<div class="modal-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Галерея проекта">
+  <div class="lightbox-box glass">
+    <div class="lb-head">
+      <span class="lb-title" id="lb-title"></span>
+      <span class="lb-counter" id="lb-counter"></span>
+      <button class="lb-close" id="lb-close" aria-label="Закрыть галерею"><i data-lucide="x"></i></button>
+    </div>
+    <div class="lb-stage">
+      <button class="lb-arrow lb-prev" id="lb-prev" aria-label="Предыдущее фото"><i data-lucide="chevron-left"></i></button>
+      <img id="lb-img" src="" alt="Фото проекта">
+      <button class="lb-arrow lb-next" id="lb-next" aria-label="Следующее фото"><i data-lucide="chevron-right"></i></button>
+    </div>
+    <div class="lb-thumbs" id="lb-thumbs"></div>
+  </div>
+</div>
+
+<script src="icons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
