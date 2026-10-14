@@ -50,7 +50,7 @@ const RUST_SERVERS = [
 /* ---------- Блок «Избранные работы» ---------- */
 const WORKS = [
   {
-    title: 'YRS — Web Site',
+    title: 'YRS Web Site',
     desc: 'Сайт для установки игрового клиента и перехода на все ресурсы проекта (соц.сети, донат-магазин, тех-поддержка).',
     img: 'assets/site1.png',
     category: 'sites',
@@ -62,7 +62,7 @@ const WORKS = [
     watch: 'https://yrsproject.ru'
   },
   {
-    title: 'YRS — Dashboard',
+    title: 'YRS Dashboard',
     desc: 'Панель управления всей экосистемой игрового проекта: менеджмент персонала, зарплаты, отчёты, удалённый доступ к серверу, статистика, логи и автоматизация всего, что только возможно.',
     img: 'assets/site2.png',
     category: 'dashboards',
@@ -111,7 +111,7 @@ const WORKS = [
     watch: 'https://emeraldrust.ru'
   },
   {
-    title: 'CLI - Skin downloader',
+    title: 'CLI Skin downloader',
     desc: 'Декомпилирует Rust.Workshop.dll с помощью ILSpyCMD, парсит класс Approved, группирует SkinID по Shortname и скачивает всё с помощью SteamCMD.',
     img: 'assets/cli1.jpg',
     featured: true,
