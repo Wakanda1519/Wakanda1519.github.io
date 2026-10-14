@@ -74,24 +74,27 @@
   let currentWorks = [];
   function renderWorks(filter){
     currentWorks = WORKS
-      // в категории «Все» избранные скрыты — они видны внутри своих категорий
-      .filter(w => filter === 'all' ? !w.featured : w.category === filter)
-      // внутри категории избранные (featured: true) поднимаются наверх
-      .sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+      // в категории «Все» показываются все работы, включая избранные
+      .filter(w => filter === 'all' ? true : w.category === filter);
+    // только внутри конкретной категории избранные (featured: true) поднимаются наверх
+    if (filter !== 'all') {
+      currentWorks.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+    }
     $('#works-grid').innerHTML = currentWorks
       .map((w, i) => `
     <article class="work-card glass reveal" data-delay="${(i % 3) * 80}">
       <div class="work-shot">
         <img src="${w.img}" alt="${w.title}" loading="lazy">
-        ${w.featured ? '<span class="feat-badge"><i data-lucide="star"></i>Избранное</span>' : ''}
+        ${w.featured && filter !== 'all' ? '<span class="feat-badge"><i data-lucide="star"></i>Избранное</span>' : ''}
       </div>
       <div class="work-body">
         <h3>${w.title}</h3>
         <p>${w.desc}</p>
-        <div class="work-tags">${w.tags.map(t => `<span>${t}</span>`).join('')}</div>
+        <div class="work-tags">${(w.tags || []).map(t => `<span>${t}</span>`).join('')}</div>
         <div class="work-links">
           ${w.gallery && w.gallery.length ? `<a href="${w.gallery[0]}" class="work-view" data-work="${i}">${ICONS.view}Посмотреть</a>` : ''}
           ${w.github ? `<a href="${w.github}" target="_blank" rel="noopener">${ICONS.github}Скачать</a>` : ''}
+          ${w.watch ? `<a href="${w.watch}" target="_blank" rel="noopener">${ICONS.view}Перейти</a>` : ''}
           ${w.buy    ? `<a href="${CTA.href}" target="_blank" rel="noopener">${ICONS.buy}Купить за ${w.buy}</a>` : ''}
         </div>
       </div>
@@ -222,11 +225,18 @@
     [['kw','const '], ['var','developer'], ['p',' = {']],
     [['p','  '], ['key','name'], ['p',': '], ['str',"'Михаил'"], ['p',',']],
     [['p','  '], ['key','nick'], ['p',': '], ['str',"'wakanda'"], ['p',',']],
-    [['p','  '], ['key','stack'], ['p',': ['], ['str',"'HTML'"], ['p',', '], ['str',"'CSS'"], ['p',', '], ['str',"'JS'"], ['p',',']],
-    [['p','         '], ['str',"'PHP'"], ['p',', '], ['str',"'SQL'"], ['p','],']],
-    [['p','  '], ['key','hardWorker'], ['p',': '], ['bool','true'], ['p',',']],
-    [['p','  '], ['key','creative'], ['p',': '], ['bool','true'], ['p',',']],
-    [['p','  '], ['key','status'], ['p',': '], ['str',"'Waiting for work'"], ['p',',']],
+    [['p','  '], ['key','stack'], ['p',': [']],
+    [['p','    '], ['str',"'HTML'"], ['p',', '], ['str',"'CSS'"], ['p',',']],
+    [['p','    '], ['str',"'JS'"], ['p',', '], ['str',"'PHP'"], ['p',',']],
+    [['p','    '], ['str',"'Go'"], ['p',', '], ['str',"'SQL'"]],
+    [['p','  ],']],
+    [['p','  '], ['key','focus'], ['p',': [']],
+    [['p','    '], ['str',"'Web Apps'"], ['p',',']],
+    [['p','    '], ['str',"'Desktop Apps'"], ['p',',']],
+    [['p','    '], ['str',"'Automation'"], ['p',',']],
+    [['p','    '], ['str',"'Business Solutions'"]],
+    [['p','  ],']],
+    [['p','  '], ['key','status'], ['p',': '], ['str',"'I’m writing code...'"], ['p',',']],
     [['p','  '], ['key','experience'], ['p',': '], ['str',"'3+ years'"]],
     [['p','};']]
   ];
