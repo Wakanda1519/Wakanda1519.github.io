@@ -118,6 +118,15 @@ const WORKS = [
     category: 'cli',
     gallery: ['assets/cli1.jpg'],
     github: 'https://github.com/Wakanda1519/Skin-downloader'
+  },
+  {
+    title: 'CLI GoSecScan',
+    desc: ' Cканер веб-уязвимостей: перебирает эндпоинты по словарю, проверяет Reflected XSS и SQL, при первом запуске сам создаёт базу сигнатур',
+    img: 'assets/cli2.png',
+    featured: true,
+    category: 'cli',
+    gallery: ['assets/cli2.png'],
+    github: 'https://github.com/Wakanda1519/GoSecScan'
   }
 ];
 
