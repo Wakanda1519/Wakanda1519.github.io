@@ -127,6 +127,15 @@ const WORKS = [
     category: 'cli',
     gallery: ['assets/cli2.png'],
     github: 'https://github.com/Wakanda1519/GoSecScan'
+  },
+  {
+    title: 'CLI GoPick',
+    desc: ' CLI-утилита, которая скачивает изображения с любого сайта, читает HTML, магазины GameStores, рендерит страницу в headless-браузере',
+    img: 'assets/cli3.png',
+    featured: true,
+    category: 'cli',
+    gallery: ['assets/cli3.png'],
+    github: 'https://github.com/Wakanda1519/GoPick'
   }
 ];
 
