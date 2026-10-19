@@ -130,7 +130,7 @@ const WORKS = [
   },
   {
     title: 'CLI GoPick',
-    desc: ' CLI-утилита, которая скачивает изображения с любого сайта, читает HTML, магазины GameStores, рендерит страницу в headless-браузере',
+    desc: ' Cкачивает изображения с любого сайта, читает HTML, магазины GameStores, рендерит страницу в headless-браузере',
     img: 'assets/cli3.png',
     featured: true,
     category: 'cli',
