@@ -111,14 +111,14 @@ const WORKS = [
     watch: 'https://emeraldrust.ru'
   },
   {
-    title: 'Desktop GoFastRPD',
+    title: 'Desktop GoFastRDP',
     desc: 'Windows-клиент для хранения RDP-подключений и запуска сеансов в один клик.',
     img: 'assets/desk1.png',
     category: 'desk',
     gallery: [
       'assets/desk1.png'
     ],
-    github: 'https://github.com/Wakanda1519/GoFastRPD'
+    github: 'https://github.com/Wakanda1519/GoFastRDP'
   },
   {
     title: 'CLI Skin downloader',
