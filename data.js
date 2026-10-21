@@ -111,6 +111,16 @@ const WORKS = [
     watch: 'https://emeraldrust.ru'
   },
   {
+    title: 'Desktop GoFastRPD',
+    desc: 'Windows-клиент для хранения RDP-подключений и запуска сеансов в один клик.',
+    img: 'assets/desk1.png',
+    category: 'desk',
+    gallery: [
+      'assets/desk1.png'
+    ],
+    github: 'https://github.com/Wakanda1519/GoFastRPD'
+  },
+  {
     title: 'CLI Skin downloader',
     desc: 'Декомпилирует Rust.Workshop.dll с помощью ILSpyCMD, парсит класс Approved, группирует SkinID по Shortname и скачивает всё с помощью SteamCMD.',
     img: 'assets/cli1.jpg',
@@ -145,7 +155,8 @@ const FILTERS = [
   { id: 'sites',      label: 'Сайты' },
   { id: 'dashboards', label: 'Дашборды' },
   { id: 'gamestores', label: 'Стили GameStores' },
-  { id: 'cli', label: 'CLI-утилиты' },
+  { id: 'desk', label: 'Десктоп' },
+  { id: 'cli', label: 'CLI-утилиты' }
 ];
 
 /* ---------- Контакты (блок «Давайте работать вместе») ---------- */
