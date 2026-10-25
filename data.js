@@ -56,8 +56,9 @@ const WORKS = [
     category: 'sites',
     gallery: [
       'assets/site1.png', 
+      'assets/site11.png', 
       'assets/site12.png', 
-      'assets/site11.png'
+      'assets/site13.png'
     ],
     watch: 'https://yrsproject.ru'
   },
