@@ -122,6 +122,18 @@ const WORKS = [
     github: 'https://github.com/Wakanda1519/GoFastRDP'
   },
   {
+    title: 'Desktop RustCuiTool',
+    desc: 'Модифицированный редактор CUI для плагинов Oxide/Carbon с поддержкой MCP.',
+    img: 'assets/desk2.png',
+    category: 'desk',
+    gallery: [
+      'assets/desk2.png',
+      'assets/desk21.png',
+      'assets/desk22.png'
+    ],
+    github: 'https://github.com/Wakanda1519/RustCuiTool'
+  },
+  {
     title: 'CLI Skin downloader',
     desc: 'Декомпилирует Rust.Workshop.dll с помощью ILSpyCMD, парсит класс Approved, группирует SkinID по Shortname и скачивает всё с помощью SteamCMD.',
     img: 'assets/cli1.jpg',
@@ -129,15 +141,6 @@ const WORKS = [
     category: 'cli',
     gallery: ['assets/cli1.jpg'],
     github: 'https://github.com/Wakanda1519/Skin-downloader'
-  },
-  {
-    title: 'CLI GoSecScan',
-    desc: ' Cканер веб-уязвимостей: перебирает эндпоинты по словарю, проверяет Reflected XSS и SQL, при первом запуске сам создаёт базу сигнатур',
-    img: 'assets/cli2.png',
-    featured: true,
-    category: 'cli',
-    gallery: ['assets/cli2.png'],
-    github: 'https://github.com/Wakanda1519/GoSecScan'
   },
   {
     title: 'CLI GoPick',
