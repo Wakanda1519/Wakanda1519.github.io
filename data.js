@@ -60,7 +60,7 @@ const WORKS = [
       'assets/site12.png', 
       'assets/site13.png'
     ],
-    watch: 'https://yrsproject.ru'
+    watch: 'https://yrs-project.com'
   },
   {
     title: 'YRS Dashboard',
@@ -75,7 +75,7 @@ const WORKS = [
       'assets/site24.png',
       'assets/site25.png'
     ],
-    watch: 'https://work.yrsproject.ru'
+    watch: 'https://work.yrs-project.com'
   },
   {
     title: 'Free Style',
@@ -197,8 +197,8 @@ const CONTACTS = [
 
 /* ---------- Ссылки моего проекта ---------- */
 const PROJECT_LINKS = [
-  { label: 'Сайт',     href: 'https://yrsproject.ru', icon: 'globe' },
-  { label: 'Магазин',  href: 'http://shop.yrsproject.ru/', icon: 'shopping-cart' },
+  { label: 'Сайт',     href: 'https://yrs-project.com', icon: 'globe' },
+  { label: 'Магазин',  href: 'http://shop.yrs-project.com/', icon: 'shopping-cart' },
   { label: 'VK',       href: 'https://vk.com/yrsrust', icon: 'vk' },
   { label: 'Discord',  href: 'https://discord.com/invite/n6XHgB5X3p', icon: 'discord' },
   { label: 'Telegram', href: 'https://t.me/yrs_rust', icon: 'send' }
