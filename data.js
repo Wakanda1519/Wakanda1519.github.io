@@ -63,6 +63,19 @@ const WORKS = [
     watch: 'https://yrs-project.com'
   },
   {
+    title: 'YRS Wiki',
+    desc: 'Справочник по игровому проекту, содержащий правила, решение проблем и разного рода информацию для игроков.',
+    img: 'assets/site6.png',
+    category: 'sites',
+    gallery: [
+      'assets/site6.png',
+      'assets/site61.png',
+      'assets/site62.png',
+      'assets/site63.png'
+    ],
+    watch: 'https://wiki.yrs-project.com'
+  },
+  {
     title: 'YRS Dashboard',
     desc: 'Панель управления всей экосистемой игрового проекта: менеджмент персонала, зарплаты, отчёты, удалённый доступ к серверу, статистика, логи и автоматизация всего, что только возможно.',
     img: 'assets/site2.png',
